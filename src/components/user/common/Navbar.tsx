@@ -21,7 +21,7 @@ const Navbar = () => {
         <CountryDropdown />
       </div>
       <div className="flex lg:hidden">
-        {showMenu ? 
+        {!showMenu ? 
         <FaBars size={32} className="text-middleColor" onClick={()=>setShowMenu(!showMenu)} /> : 
         <FaTimes size={32} className="text-middleColor" onClick={()=>setShowMenu(!showMenu)} />
         }
