@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FaFacebook, FaLinkedin } from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"
 import { ISocialMedia } from '../../types'
 
 const socialMedias: ISocialMedia[] = [
@@ -10,6 +10,10 @@ const socialMedias: ISocialMedia[] = [
     {
         icon: <FaFacebook size={24} />,
         lnk: 'https://facebook.com/username'
+    },
+    {
+        icon: <FaInstagram size={24} />,
+        lnk: 'https://instagram.com/username'
     },
 ]
 

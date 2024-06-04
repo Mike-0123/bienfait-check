@@ -11,7 +11,7 @@ const Navbar = () => {
   const currentPath = useLocation().pathname;
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className="select-none bg-textColorTransparent text-bgColor w-full flex justify-between items-center h-20 sticky top-0 px-4">
+    <div className="select-none bg-textColorTransparent text-bgColor w-full flex justify-between items-center h-20 sticky top-0 px-4 z-30">
       <div className="flex gap-1 items-center justify-center"><img src={logo} className="w-10" />{constants.webInfo.name}</div>
       <div className="gap-8 hidden lg:flex">
         {constants.navLinks.map(link => (<Link key={link.lnk} to={link.lnk} className={`uppercase hover:text-shineColor ${currentPath === link.lnk ? 'text-shineColor' : 'text-middleColor'}`}>{link.name}</Link>))}
