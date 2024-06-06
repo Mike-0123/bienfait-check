@@ -5,6 +5,7 @@ import Contact from "./components/user/pages/Contact"
 import Portfolio from "./components/user/pages/Portfolio"
 import Page404 from "./components/user/common/Page404"
 import User from "./User"
+import Join from "./components/user/pages/Join"
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="about" element={<About />}/>
           <Route path="contact" element={<Contact />}/>
           <Route path="portfolio" element={<Portfolio />}/>
+          <Route path="join" element={<Join />}/>
           <Route path="*" element={<Page404 />}/>
         </Route>
       </Routes>

@@ -1,5 +1,5 @@
 import constants from "../../../constants";
-import { bg, card2, card3, collab, hero, logo, person1, project1, project2, project3, project4, project5 } from "../assets";
+import { bg, card2, card3, card4, card5, card6, collab, hero, logo, person1, project1, project2, project3, project4, project5 } from "../assets";
 import Card from "../common/Card";
 import { card1 } from "../assets";
 import { subTitleStyles, titleStyles } from "../../styles";
@@ -75,12 +75,15 @@ const Home = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-4 py-4">
                         <Card title='Pre-Design Planning' description="Consultation, master planning and research." number={1} img={card1} />
                         <Card title='Architectural Design' description="Design, technical drawings and 3D visualisation" number={2} img={card2} />
-                        <Card title='Project Consulting' description="Contract negotiations and project administration" number={3} img={card3} />
+                        <Card title='Project Consulting and construction' description="Contract negotiations and project administration" number={3} img={card3} />
+                        <Card title='Land Survery' description="Contract negotiations and project administration" number={4} img={card4} />
+                        <Card title='Interior Design' description="Contract negotiations and project administration" number={5} img={card5} />
+                        <Card title='Real Estate' description="Contract negotiations and project administration" number={6} img={card6} />
                     </div>
                 </div>
 
-                <div className="p-10 bg-white h-[60vh] flex justify-center items-center flex-col gap-8 text-center">
-                    <img src={logo} className="w-20 rounded-full" />
+                <div className="p-10 bg-white h-[80vh] flex justify-center items-center flex-col gap-8 text-center">
+                    <img src={logo} className="w-48" />
                     <p className="font-thin text-2xl">A network of visionary architects with a passion for <br /> innovative, beautiful and sustainable buildings</p>
                     <Link to='/about' className="uppercase bg-textColor px-5 py-3 text-bgColor text-xs rounded-md hover:bg-shineColor">ABOUT {constants.webInfo.name}</Link>
                 </div>

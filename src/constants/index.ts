@@ -1,8 +1,10 @@
 const webInfo = {
     name: "Spartial Engineering Group",
-    phone: "0735177666",
+    phone: "735177666",
     whatsappText: "Hello xxx I am from your website Spartial Engineering, can we talk?",
-    slogan: "We make your dreams come true"
+    slogan: "We make your dreams come true",
+    location: "KG 774 St, Kigali-Rwanda",
+    email: "email@gmail.com"
 }
 
 const navLinks = [
@@ -21,6 +23,10 @@ const navLinks = [
     {
         name: "Contact",
         lnk: "/contact"
+    },
+    {
+        name: "Join Us",
+        lnk: "/join"
     }
 ]
 
