@@ -19,7 +19,6 @@ import project5 from './projects/project5.jpg';
 import person1 from './testimony/person1.jpeg';
 
 import collab from './collab.jpg';
-import { BiImport } from 'react-icons/bi';
 
 export {
     logo,
