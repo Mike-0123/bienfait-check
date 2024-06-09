@@ -1,5 +1,5 @@
 import { FaWhatsapp } from 'react-icons/fa'
-import constants from '../../../constants'
+import constants from '../../../../constants'
 
 const WhatsAppButton = () => {
     return (

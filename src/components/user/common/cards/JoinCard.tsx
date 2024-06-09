@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { h1Styles, pSmallStyles } from "../../styles"
+import { h1Styles, pSmallStyles } from "../../../styles"
 
 const JoinCard = ({ title, description, img }: { img: string, description: string, title: string }) => {
     return (

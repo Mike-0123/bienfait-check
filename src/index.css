@@ -5,4 +5,5 @@
 
 *{
     font-family: poppins;
+    user-select: none;
 }

@@ -1,8 +1,16 @@
-import CommingSoon from "../common/CommingSoon"
+import { about_bg } from "../assets"
+import PageHeader from "../common/shared/PageHeader"
+
 
 const About = () => {
   return (
-    <CommingSoon pageName="About Us Page" />
+    <div className="">
+      <PageHeader
+        title="ABOUT US"
+        backgroundImage={about_bg}
+        description="Learn more about our collaborative workspace, our services and brand philosophy."
+      />
+    </div>
   )
 }
 

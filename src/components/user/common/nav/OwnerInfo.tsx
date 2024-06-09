@@ -1,6 +1,6 @@
 import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
 import { FaLocationPin } from 'react-icons/fa6'
-import constants from '../../../constants'
+import constants from '../../../../constants'
 import { Link } from 'react-router-dom'
 
 const OwnerInfo = () => {

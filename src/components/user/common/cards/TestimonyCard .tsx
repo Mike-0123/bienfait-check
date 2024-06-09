@@ -1,5 +1,5 @@
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
-import { h1Styles, pSmallStyles, pStyles } from '../../styles'
+import { h1Styles, pSmallStyles, pStyles } from '../../../styles'
 
 const TestimonyCard  = ({ name, testimony, title, img }: { title: string, testimony: string, name: string, img: string }) => {
   return (

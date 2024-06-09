@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import CountryFlag from './CountryFlag';
 import { FaChevronDown } from 'react-icons/fa';
-import constants from '../../../constants';
+import constants from '../../../../constants';
 
 
 

@@ -1,13 +1,13 @@
 import { Link, useNavigate } from "react-router-dom"
-import constants from "../../../constants"
-import SocialMedia from "./SocialMedia"
-import { footerImg } from "../assets"
+import constants from "../../../../constants"
+import SocialMedia from "../shared/SocialMedia"
+import { footerImg } from "../../assets"
 
 const Footer = () => {
   const navigate = useNavigate()
   return (
     <div>
-      <div className="mt-20 h-64 gap-4 w-full bg-cover bg-center flex flex-col  justify-center items-center text-bgColor" style={{ backgroundImage: `url(${footerImg})` }}>
+      <div className="h-64 gap-4 w-full bg-cover bg-center flex flex-col  justify-center items-center text-bgColor" style={{ backgroundImage: `url(${footerImg})` }}>
         <h1 className="text-4xl">HAVE A VISION?</h1>
         <p className="text-middleColor text-lg">We can make it {constants.webInfo.name}</p>
         <button className="bg-textColor px-4 py-3 rounded-md hover:bg-shineColor" onClick={()=>navigate('/contact')}>CONTACT US NOW</button>

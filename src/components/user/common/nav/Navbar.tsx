@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
-import constants from "../../../constants"
-import { logo } from "../assets"
+import constants from "../../../../constants"
+import { logo } from "../../assets"
 import { useLocation } from 'react-router-dom'
 import CountryDropdown from "./CountryDropdown"
-import SocialMedia from "./SocialMedia"
+import SocialMedia from "../shared/SocialMedia"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { useState } from "react"
 import OwnerInfo from "./OwnerInfo"

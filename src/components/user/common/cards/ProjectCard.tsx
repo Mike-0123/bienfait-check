@@ -1,4 +1,4 @@
-import { h1Styles, pSmallStyles } from "../../styles"
+import { h1Styles, pSmallStyles } from "../../../styles"
 
 const ProjectCard = ({index, img, location, status, description, name} : {index: number, img: string, location: string, status: string, description: string, name: string}) => {
     return (

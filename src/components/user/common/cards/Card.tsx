@@ -1,4 +1,4 @@
-import { h1Styles, pSmallStyles } from '../../styles'
+import { h1Styles, pSmallStyles } from '../../../styles'
 
 const Card = ({ title, description, number, img }: { title: string, description: string, number: number, img: string }) => {
   return (
@@ -9,9 +9,9 @@ const Card = ({ title, description, number, img }: { title: string, description:
           <h1 className="text-3xl font-extrabold">{number}</h1>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center mb-8">
+      <div className="px-2 flex flex-col justify-center items-center mb-8">
         <h1 className={h1Styles}>{title}</h1>
-        <p className={pSmallStyles}>{description}</p>
+        <p className={`${pSmallStyles} text-center`}>{description}</p>
       </div>
     </div>
   )

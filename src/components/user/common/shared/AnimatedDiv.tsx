@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { divStyles } from "../../styles"
+import { divStyles } from "../../../styles"
 
 const AnimatedDiv = ({ children }: { children: React.ReactNode }) => {
   return (

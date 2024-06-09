@@ -1,12 +1,12 @@
 import constants from "../../../constants";
 import { bg, card2, card3, card4, card5, card6, collab, hero, logo, person1, project1, project2, project3, project4, project5 } from "../assets";
-import Card from "../common/Card";
+import Card from "../common/cards/Card";
 import { card1 } from "../assets";
 import { subTitleStyles, titleStyles } from "../../styles";
-import ProjectCard from "../common/ProjectCard";
+import ProjectCard from "../common/cards/ProjectCard";
 import { Link } from "react-router-dom";
-import TestimonyCard from "../common/TestimonyCard ";
-import JoinCard from "../common/JoinCard";
+import TestimonyCard from "../common/cards/TestimonyCard ";
+import JoinCard from "../common/cards/JoinCard";
 
 const projects = [
     {

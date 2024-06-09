@@ -17,8 +17,12 @@ import project4 from './projects/project4.jpeg';
 import project5 from './projects/project5.jpg';
 
 import person1 from './testimony/person1.jpeg';
-
 import collab from './collab.jpg';
+
+import contact_bg from './contact_bg.jpeg';
+import join_bg from './join_bg.jpeg';
+import portfolio_bg from './portfolio_bg.jpeg';
+import about_bg from './about_bg.jpeg';
 
 export {
     logo,
@@ -38,5 +42,9 @@ export {
     person1,
     collab,
     card5,
-    card4
+    card4,
+    contact_bg,
+    join_bg,
+    portfolio_bg,
+    about_bg,
 }
