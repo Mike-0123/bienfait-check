@@ -21,7 +21,7 @@ const socialMedias: ISocialMedia[] = [
 const SocialMedia = ({className}: {className?: string}) => {
   return (
     <div className={`gap-2 flex ${className}`}>
-        {socialMedias.map(s => <Link to={s.lnk} className='hover:text-middleColor'>{s.icon}</Link>)}
+        {socialMedias.map(s => <Link key={s.lnk} to={s.lnk} className='hover:text-middleColor'>{s.icon}</Link>)}
     </div>
   )
 }

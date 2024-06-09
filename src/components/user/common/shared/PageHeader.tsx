@@ -8,9 +8,8 @@ const PageHeader = ({
     description
 }: IPageHeaderProps) => {
     return (
-        <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 select-none mb-1">
-            <img src={backgroundImage}
-                className="absolute inset-0 -z-10 h-full w-full object-cover opacity-20" />
+        <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 mb-1">
+            <img src={backgroundImage} className="absolute inset-0 -z-10 h-full w-full object-cover opacity-20" />
             <div
                 className='hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl'
                 aria-hidden='true'>

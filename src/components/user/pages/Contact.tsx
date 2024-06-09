@@ -3,7 +3,7 @@ import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "react-toastify";
 import { h1Styles, pSmallStyles, subTitleStyles, titleStyles } from "../../styles";
-import { bg, contact_bg } from "../assets";
+import { contact_bg } from "../assets";
 import Input from "../common/form/Input";
 import TextArea from "../common/form/TextArea";
 import PageHeader from "../common/shared/PageHeader";
@@ -13,6 +13,7 @@ import ContactCard from "../common/cards/ContactCard";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import constants from "../../../constants";
 import { FaLocationDot } from "react-icons/fa6";
+import AnimatedDiv from "../common/shared/AnimatedDiv";
 
 const Contact = () => {
   const [isSending, setIsSending] = useState(false);
@@ -38,13 +39,13 @@ const Contact = () => {
 
 
   return (
-    <div className="bg-auto bg-center " style={{ backgroundImage: `url(${bg})` }}>
+    <div>
       <PageHeader
         title="CONTACT US"
         backgroundImage={contact_bg}
         description="Ready to start a project? Have a vision you would like to discuss? Get in touch with us."
       />
-      <div className="relative mx-auto w-11/12 md:w-8/12 lg:w-1/2 mt-3">
+      <AnimatedDiv className="relative mx-auto w-11/12 md:w-8/12 lg:w-1/2 mt-3">
         <div className="absolute top-0 left-0 w-full h-2 bg-gray-800 rounded-t"></div>
         <div className="bg-bgColor shadow-middleColor shadow-2xl wfull p-2 rounded-md px-3">
           <h1 className={h1Styles}>EMAIL US</h1>
@@ -84,8 +85,8 @@ const Contact = () => {
             </form>
           </FormProvider>
         </div>
-      </div>
-      <div className="py-10 my-5">
+      </AnimatedDiv>
+      <AnimatedDiv className="py-10 my-5">
         <h1 className={subTitleStyles}>{constants.webInfo.name}</h1>
         <h1 className={titleStyles}>CONTACT DETAILS</h1>
         <div className="grid grid-cols-1 lg:grid-cols-3">
@@ -93,7 +94,7 @@ const Contact = () => {
           <ContactCard icon={<FaLocationDot />} title="ADDRESS" data={constants.webInfo.location} />
           <ContactCard icon={<FaEnvelope />} title="EMAIL" data={constants.webInfo.email} />
         </div>
-      </div>
+      </AnimatedDiv>
     </div>
   );
 };
