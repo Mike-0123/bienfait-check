@@ -1,22 +1,20 @@
-import { h1Styles, pSmallStyles } from "../../../styles"
+import { pSmallStyles } from "../../../styles"
+import { IAboutCard } from "../../../types"
+import Button from "../form/Button"
 
-const AboutCard = ({index, img, location, status, description, name} : {index: number, img: string, location: string, status: string, description: string, name: string}) => {
+const AboutCard = ({ index, img, subTitle, btnText, btnLnk, description, title }: IAboutCard) => {
     return (
         <div className={`bg-bgColor text-textColor mx-auto w-full my-4 flex flex-col justify-between rounded-md shadow-2xl shadow-middleColor ${index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
-            <div className="w-full h-64 bg-cover bg-center rounded-sm lg:w-1/2 lg:h-96" style={{ backgroundImage: `url(${img})` }}></div>
+            <div className="w-full h-80 bg-cover bg-center rounded-sm lg:w-1/2 lg:h-[75vh]" style={{ backgroundImage: `url(${img})` }}></div>
             <div className="bg-white p-5 lg:w-1/2 relative lg:pt-20 lg:px-10 rounded-lg">
-            <div className={`bg-textColor text-bgColor px-5 py-2 text-lg lg:absolute top-5 lg:text-2xl lg:rounded-md lg:px-10 lg:w-full lg:flex lg:justify-center ${index % 2 === 0 ? 'left-20' : '-left-20'}`}>{name}</div>
                 <div className="my-4">
-                    <h1 className={h1Styles}>LOCATION</h1>
-                    <p className={pSmallStyles}>{location}</p>
+                    <h1 className={`font-bold text-3xl tracking-wider text-wrap`}>{title}</h1>
+                    <p className="text-lg text-middleColor my-1">{subTitle}</p>
                 </div>
-                <div className="my-4">
-                    <h1 className={h1Styles}>STATUS</h1>
-                    <p className={pSmallStyles}>{status}</p>
-                </div>
-                <div className="my-4">
-                    <h1 className={h1Styles}>DESCRIPTION</h1>
-                    <p className={pSmallStyles}> {description} </p>
+                <p className={`${pSmallStyles} my-8`}> {description} </p>
+
+                <div className="w-full flex justify-center items-center">
+                    <Button btnText={btnText} btnLnk={btnLnk} />
                 </div>
             </div>
         </div>

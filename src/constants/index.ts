@@ -4,7 +4,8 @@ const webInfo = {
     whatsappText: "Hello xxx I am from your website Spartial Engineering, can we talk?",
     slogan: "We make your dreams come true",
     location: "KG 774 St, Kigali-Rwanda",
-    email: "email@gmail.com"
+    email: "email@gmail.com",
+    ownerNames: "ENGINEER Samuel"
 }
 
 const navLinks = [

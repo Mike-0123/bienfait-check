@@ -1,23 +1,14 @@
-import { FaSpinner } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const Button = ({title, loadingTitle, isLoading, onClick}: IButton) => {
+const Button = ({btnText, btnLnk}: IButton) => {
   return (
-    <button
-        onClick={onClick}
-        className="my-1 mx-auto px-10 py-2 bg-shineColor rounded-lg text-bgColor text-xl hover:opacity-80 flex justify-center items-center gap-2"
-        disabled={isLoading}
-    >
-        {isLoading && <FaSpinner className="animate-spin text-2xl" />}
-        {isLoading ? loadingTitle : title}
-    </button>
+    <Link to={btnLnk} className="uppercase bg-textColor px-6 py-4 text-bgColor text-xs rounded-md hover:bg-shineColor my-2">{btnText}</Link>
   )
 }
 
 export interface IButton{
-    title: string;
-    loadingTitle?: string;
-    isLoading?: boolean;
-    onClick: ()=>void;
+    btnLnk: string;
+    btnText: string;
 }
 
 export default Button
