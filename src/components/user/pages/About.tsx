@@ -2,13 +2,14 @@ import { FaBuilding, FaLightbulb, FaPencilAlt, FaToolbox } from "react-icons/fa"
 import constants from "../../../constants"
 import { subTitleStyles, titleStyles } from "../../styles"
 import { IAboutCard, IServceCard } from "../../types"
-import { about1, about3, about4, about_bg, bg, logo } from "../assets"
+import { about1, about3, about4, about_bg, logo } from "../assets"
 import AboutCard from "../common/cards/AboutCard"
 import AnimatedDiv from "../common/shared/AnimatedDiv"
 import PageHeader from "../common/shared/PageHeader"
 import { socialMediaLinks } from "../common/shared/SocialMedia"
 import ServiceCard from "../common/cards/ServiceCard"
 import { FaBookBookmark, FaNoteSticky } from "react-icons/fa6"
+import ContentsDiv from "../common/shared/ContentsDiv"
 
 const abouts: IAboutCard[] = [
   {
@@ -53,32 +54,32 @@ const services: IServceCard[] = [
   {
     title: 'Pre-Design Consultation',
     description: 'Detailed consultation to help define the purpose and basic requirements of the project followed by pre-design services such master planning and research of the site and building.',
-    icon: <FaLightbulb size={64}/>
+    icon: <FaLightbulb size={64} />
   },
   {
     title: 'Design Development',
     description: 'Evolving the client brief from rough sketches to a full set of plans and elevations demonstrating the final form of the building along with the indicative costs of construction.',
-    icon: <FaPencilAlt size={64}/>
+    icon: <FaPencilAlt size={64} />
   },
   {
     title: '3D Visualisation',
     description: 'Converting plans and elevations into 3-dimensional renders of the building façade and surrounding environment as a clear visualisation of the final aesthetic, form and materials.',
-    icon: <FaBuilding size={64}/>
+    icon: <FaBuilding size={64} />
   },
   {
     title: 'Contruction Documents',
     description: 'Development of plans, elevations and other drawings into a working set of construction drawings and technical specifications for the contractor and other design consultants.',
-    icon: <FaBookBookmark size={64}/>
+    icon: <FaBookBookmark size={64} />
   },
   {
     title: 'Contract Negotiations',
     description: 'Acting as an agent and advisor to the client in soliciting the bidding process and contract negotiations in order to validate bids and pursue maximum value for the money.',
-    icon: <FaNoteSticky size={64}/>
+    icon: <FaNoteSticky size={64} />
   },
   {
     title: 'Contract Administration',
     description: 'Acting as an agent and advisor to the client during construction in order to ensure that the project is built in accordance with the construction drawings and specifications.',
-    icon: <FaToolbox size={64}/>
+    icon: <FaToolbox size={64} />
   },
 ]
 
@@ -91,7 +92,7 @@ const About = () => {
         description="Learn more about our collaborative workspace, our services and brand philosophy."
       />
 
-      <div className="bg-auto bg-center" style={{ backgroundImage: `url(${bg})` }}>
+      <ContentsDiv>
 
         <AnimatedDiv className="p-10">
           <div className="mb-5">
@@ -113,7 +114,7 @@ const About = () => {
           </div>
         </AnimatedDiv>
 
-      </div>
+      </ContentsDiv >
     </div>
   )
 }

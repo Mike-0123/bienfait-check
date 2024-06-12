@@ -14,6 +14,7 @@ import { FaEnvelope, FaPhone } from "react-icons/fa";
 import constants from "../../../constants";
 import { FaLocationDot } from "react-icons/fa6";
 import AnimatedDiv from "../common/shared/AnimatedDiv";
+import ContentsDiv from "../common/shared/ContentsDiv";
 
 const Contact = () => {
   const [isSending, setIsSending] = useState(false);
@@ -45,56 +46,58 @@ const Contact = () => {
         backgroundImage={contact_bg}
         description="Ready to start a project? Have a vision you would like to discuss? Get in touch with us."
       />
-      <AnimatedDiv className="relative mx-auto w-11/12 md:w-8/12 lg:w-1/2 mt-3">
-        <div className="absolute top-0 left-0 w-full h-2 bg-gray-800 rounded-t"></div>
-        <div className="bg-bgColor shadow-middleColor shadow-2xl wfull p-2 rounded-md px-3">
-          <h1 className={h1Styles}>EMAIL US</h1>
-          <p className={pSmallStyles}>
-            Send us a message and our team will get back to you as soon as possible
-          </p>
-          <FormProvider {...formMethods}>
-            <form onSubmit={formMethods.handleSubmit(handleSubmit)}>
-              <Input
-                title="First Name"
-                type="text"
-                placeholder="Enter your first name"
-                name="firstName"
-              />
-              <Input
-                title="Last Name"
-                type="text"
-                placeholder="Enter your last name"
-                name="lastName"
-              />
-              <Input
-                title="Email"
-                type="email"
-                placeholder="Enter your email"
-                name="email"
-              />
-              <TextArea
-                title="Message"
-                placeholder="Enter your message"
-                name="message"
-              />
-              <SubmitButton
-                title="SEND"
-                loadingTitle="Sending"
-                isLoading={isSending}
-              />
-            </form>
-          </FormProvider>
-        </div>
-      </AnimatedDiv>
-      <AnimatedDiv className="py-10 my-5">
-        <h1 className={subTitleStyles}>{constants.webInfo.name}</h1>
-        <h1 className={titleStyles}>CONTACT DETAILS</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-3">
-          <ContactCard icon={<FaPhone />} title="TELEPHONE" data={`+250${constants.webInfo.phone}`} />
-          <ContactCard icon={<FaLocationDot />} title="ADDRESS" data={constants.webInfo.location} />
-          <ContactCard icon={<FaEnvelope />} title="EMAIL" data={constants.webInfo.email} />
-        </div>
-      </AnimatedDiv>
+      <ContentsDiv>
+        <AnimatedDiv className="relative mx-auto w-11/12 md:w-8/12 lg:w-1/2 mt-3">
+          <div className="absolute top-0 left-0 w-full h-2 bg-gray-800 rounded-t"></div>
+          <div className="bg-bgColor shadow-middleColor shadow-2xl wfull p-2 rounded-md px-3">
+            <h1 className={h1Styles}>EMAIL US</h1>
+            <p className={pSmallStyles}>
+              Send us a message and our team will get back to you as soon as possible
+            </p>
+            <FormProvider {...formMethods}>
+              <form onSubmit={formMethods.handleSubmit(handleSubmit)}>
+                <Input
+                  title="First Name"
+                  type="text"
+                  placeholder="Enter your first name"
+                  name="firstName"
+                />
+                <Input
+                  title="Last Name"
+                  type="text"
+                  placeholder="Enter your last name"
+                  name="lastName"
+                />
+                <Input
+                  title="Email"
+                  type="email"
+                  placeholder="Enter your email"
+                  name="email"
+                />
+                <TextArea
+                  title="Message"
+                  placeholder="Enter your message"
+                  name="message"
+                />
+                <SubmitButton
+                  title="SEND"
+                  loadingTitle="Sending"
+                  isLoading={isSending}
+                />
+              </form>
+            </FormProvider>
+          </div>
+        </AnimatedDiv>
+        <AnimatedDiv className="py-10 my-5">
+          <h1 className={subTitleStyles}>{constants.webInfo.name}</h1>
+          <h1 className={titleStyles}>CONTACT DETAILS</h1>
+          <div className="grid grid-cols-1 lg:grid-cols-3">
+            <ContactCard icon={<FaPhone />} title="TELEPHONE" data={`+250${constants.webInfo.phone}`} />
+            <ContactCard icon={<FaLocationDot />} title="ADDRESS" data={constants.webInfo.location} />
+            <ContactCard icon={<FaEnvelope />} title="EMAIL" data={constants.webInfo.email} />
+          </div>
+        </AnimatedDiv>
+      </ContentsDiv>
     </div>
   );
 };

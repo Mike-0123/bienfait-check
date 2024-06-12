@@ -1,5 +1,5 @@
 import constants from "../../../constants";
-import { bg, card2, card3, card4, card5, card6, collab, logo, person1, project1, project2, project3, project4, project5 } from "../assets";
+import { card2, card3, card4, card5, card6, collab, logo, person1, project1, project2, project3, project4, project5 } from "../assets";
 import Card from "../common/cards/Card";
 import { card1 } from "../assets";
 import { subTitleStyles, titleStyles } from "../../styles";
@@ -9,6 +9,7 @@ import TestimonyCard from "../common/cards/TestimonyCard ";
 import JoinCard from "../common/cards/JoinCard";
 import AnimatedDiv from "../common/shared/AnimatedDiv";
 import HeroSection from "../common/home/HeroSection";
+import ContentsDiv from "../common/shared/ContentsDiv";
 
 const projects = [
     {
@@ -57,9 +58,9 @@ const Home = () => {
     return (
         <div>
 
-           <HeroSection />
+            <HeroSection />
 
-            <div className="bg-auto bg-center" style={{ backgroundImage: `url(${bg})` }}>
+            <ContentsDiv>
 
                 <AnimatedDiv className="text-textColor py-10" >
                     <h1 className={subTitleStyles}>Welcome to {constants.webInfo.name}</h1>
@@ -112,7 +113,7 @@ const Home = () => {
                 </AnimatedDiv>
 
 
-            </div>
+            </ContentsDiv>
 
         </div>
     )

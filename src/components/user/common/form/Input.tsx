@@ -1,10 +1,10 @@
 import { useFormContext } from "react-hook-form";
 
-const Input = ({ title, placeholder, type, name }: IInput) => {
+const Input = ({ title, placeholder, type, name, className }: IInput) => {
   const { register, formState: { errors }, } = useFormContext();
 
   return (
-    <div className="flex flex-col gap-1 my-2">
+    <div className={`flex flex-col gap-1 my-2 ${className && className}`}>
       <span className="text-textColor">{title}</span>
       <input
         type={type}
@@ -26,6 +26,7 @@ export interface IInput {
   type: string;
   title: string;
   name: string;
+  className?: string;
 }
 
 export default Input

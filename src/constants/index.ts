@@ -5,7 +5,12 @@ const webInfo = {
     slogan: "We make your dreams come true",
     location: "KG 774 St, Kigali-Rwanda",
     email: "email@gmail.com",
-    ownerNames: "ENGINEER Samuel"
+    ownerNames: "ENGINEER Samuel",
+}
+
+const applyRequirements = {
+  experience: '7 Years',
+  softwares: 'BIM, Rhino and AutoCad.',
 }
 
 const navLinks = [
@@ -48,5 +53,6 @@ export const staggerContainer = (staggerChildren?: any, delayChildren?: any) => 
 export default { 
     webInfo,
     navLinks,
-    countries
+    countries,
+    applyRequirements
  };
