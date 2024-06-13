@@ -8,6 +8,9 @@ import Portfolio from "./components/user/pages/Portfolio"
 import Page404 from "./components/user/common/shared/Page404"
 import User from "./User"
 import Join from "./components/user/pages/Join"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
 

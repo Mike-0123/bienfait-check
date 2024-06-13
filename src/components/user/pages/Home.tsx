@@ -15,7 +15,7 @@ const projects = [
     {
         id: 1,
         name: 'SEA-VIEW APARTMENTS',
-        img: project1,
+        img: [project1, project2, project3],
         location: 'Kigali, Rwanda',
         status: 'Completed in 2023',
         description: 'This residential project is for an urban double family house located in the city of Chalkida. The main idea is to unite the two residences into one discriminated whole so that they are both parts of one concrete volume. Selected parts of the volume are partitioned to establish an indoor-outdoor connection. The different parts of the synthesis are cladded with different materials.'
@@ -23,7 +23,7 @@ const projects = [
     {
         id: 2,
         name: 'GORILLA APARTMENT',
-        img: project2,
+        img: [project2, project1, project4],
         location: 'Butare, Rwanda',
         status: 'Pending',
         description: 'This residential project is for an urban double family house located in the city of Chalkida. The main idea is to unite the two residences into one discriminated whole so that they are both parts of one concrete volume. Selected parts of the volume are partitioned to establish an indoor-outdoor connection. The different parts of the synthesis are cladded with different materials.'
@@ -31,7 +31,7 @@ const projects = [
     {
         id: 3,
         name: 'GEL BATIMENT',
-        img: project3,
+        img: [project3, project5, project1],
         location: 'Butare, Rwanda',
         status: 'Pending',
         description: 'This residential project is for an urban double family house located in the city of Chalkida. The main idea is to unite the two residences into one discriminated whole so that they are both parts of one concrete volume. Selected parts of the volume are partitioned to establish an indoor-outdoor connection. The different parts of the synthesis are cladded with different materials.'
@@ -39,7 +39,7 @@ const projects = [
     {
         id: 4,
         name: 'ROUNDED CORNER PLAZA',
-        img: project4,
+        img: [project4, project5, project2, project3],
         location: 'Butare, Rwanda',
         status: 'Pending',
         description: 'This residential project is for an urban double family house located in the city of Chalkida. The main idea is to unite the two residences into one discriminated whole so that they are both parts of one concrete volume. Selected parts of the volume are partitioned to establish an indoor-outdoor connection. The different parts of the synthesis are cladded with different materials.'
@@ -47,7 +47,7 @@ const projects = [
     {
         id: 5,
         name: 'VILLA APARTMENT',
-        img: project5,
+        img: [project5, project3, project2, project4],
         location: 'Butare, Rwanda',
         status: 'Pending',
         description: 'This residential project is for an urban double family house located in the city of Chalkida. The main idea is to unite the two residences into one discriminated whole so that they are both parts of one concrete volume. Selected parts of the volume are partitioned to establish an indoor-outdoor connection. The different parts of the synthesis are cladded with different materials.'
@@ -77,11 +77,11 @@ const Home = () => {
 
                 <AnimatedDiv className="p-10 bg-white h-[80vh] flex justify-center items-center flex-col gap-8 text-center">
                     <img src={logo} className="w-48" />
-                    <p className="font-thin text-2xl">A network of visionary architects with a passion for <br /> innovative, beautiful and sustainable buildings</p>
+                    <p className="text-middleColor text-lg">A network of visionary architects with a passion for <br /> innovative, beautiful and sustainable buildings</p>
                     <Link to='/about' className="uppercase bg-textColor px-5 py-3 text-bgColor text-xs rounded-md hover:bg-shineColor">ABOUT {constants.webInfo.name}</Link>
                 </AnimatedDiv>
 
-                <AnimatedDiv className="p-10">
+                <AnimatedDiv className="p-8 lg:px-24">
                     <div className="mb-5">
                         <h1 className={subTitleStyles}>We are Passionate Architects</h1>
                         <h1 className={titleStyles}>FEATURED WORK</h1>
