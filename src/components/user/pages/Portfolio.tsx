@@ -34,6 +34,7 @@ const Portfolio = () => {
               < ImgCarousel key={index} images={portfolio} />
             </div>))}
         </AnimatedDiv>
+        {isLoading && <p>Loading data.</p>}
       </ContentsDiv>
     </div>
   )
