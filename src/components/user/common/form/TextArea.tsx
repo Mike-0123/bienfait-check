@@ -5,7 +5,7 @@ const TextArea = ({ title, placeholder, name }: ITextArea) => {
 
   return (
     <div className="flex flex-col gap-1 my-2">
-      <span className="text-textColor">{title}</span>
+      <span className="text-textUserColor">{title}</span>
       <textarea
         placeholder={placeholder}
         {...register(name)}

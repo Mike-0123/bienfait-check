@@ -26,6 +26,7 @@ const ImgCarousel: React.FC<ImgCarouselProps> = ({ images }) => {
             src={image}
             alt={`Slide ${index}`}
             style={{ width: '100%', height: '400px', objectFit: 'cover' }}
+            className='object-scale-down'
           />
         </div>
       ))}
