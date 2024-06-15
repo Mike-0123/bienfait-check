@@ -4,7 +4,7 @@ import ImgCarousel from "../shared/ImgCarousel"
 const ProjectCard = ({index, img, location, status, description, name} : {index: number, img: string[], location: string, status: string, description: string, name: string}) => {
     return (
         <div className={`bg-bgUserColor text-textUserColor mx-auto w-full my-4 flex flex-col justify-between rounded-md shadow-2xl shadow-middleColor ${index % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
-            <div className="w-full h-64 bg-cover bg-center rounded-sm lg:w-1/2 lg:h-96" style={{ backgroundImage: `url(${img[0]})` }}>
+            <div className="w-full h-64 bg-cover bg-center rounded-sm lg:w-1/2 lg:h-96 overflow-hidden" style={{ backgroundImage: `url(${img[0]})` }}>
                 <ImgCarousel images={img} />
             </div>
             <div className="bg-white p-5 lg:w-1/2 relative lg:pt-20 lg:px-10 rounded-lg">

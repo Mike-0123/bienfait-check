@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 import useLocalState from './hooks/useLocalState';
 import { dashboardInfo } from '../data'
 
@@ -6,23 +6,28 @@ const AdminContext = createContext();
 
 export const useAdminContext = () => useContext(AdminContext);
 
-export const AdminContextProvider = ({ children }) => {
+export const AdminContextProvider = ({ children }: {children: any}) => {
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useLocalState(`is${dashboardInfo.localStoragePrefix}LoggedIn`, false);
   const [loggedInAdmin, setLoggedInAdmin] = useLocalState(`loggedIn${dashboardInfo.localStoragePrefix}`, null);
 
   const [dashboardData, setDashboardData] = useState(null)
-  const [users, setUsers] = useState(null)
+  const [projects, setProjects] = useState(null)
+  const [announcements, setAnnouncements] = useState(null)
 
-  const addDashboardData = (data) =>{
+  const addDashboardData = (data: any) =>{
     setDashboardData(data);
   }
 
   
-  const addUsers = (data) =>{
-    setUsers(data)
+  const addProjects = (data: any) =>{
+    setProjects(data)
   }
 
-  const loginAdmin = (admin) => {
+  const addAnnouncements = (data: any) =>{
+    setAnnouncements(data)
+  }
+
+  const loginAdmin = (admin: any) => {
     setLoggedInAdmin(admin);
     setIsAdminLoggedIn(true);
   };
@@ -34,7 +39,8 @@ export const AdminContextProvider = ({ children }) => {
 
   return (
     <AdminContext.Provider value={{
-       isAdminLoggedIn, loggedInAdmin, loginAdmin, logoutAdmin, dashboardData, addDashboardData, users, addUsers
+       isAdminLoggedIn, loggedInAdmin, loginAdmin, logoutAdmin, dashboardData, addDashboardData,
+       projects, addProjects, announcements, addAnnouncements
        }}>
       {children}
     </AdminContext.Provider>

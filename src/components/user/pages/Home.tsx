@@ -1,5 +1,5 @@
 import constants from "../../../constants";
-import { card2, card3, card4, card5, card6, collab, logo, person1, project1, project2, project3, project4, project5 } from "../assets";
+import { card2, card3, card4, card5, card6, collab, logo, person1} from "../assets";
 import Card from "../common/cards/Card";
 import { card1 } from "../assets";
 import { subTitleStyles, titleStyles } from "../../styles";
@@ -10,54 +10,18 @@ import JoinCard from "../common/cards/JoinCard";
 import AnimatedDiv from "../common/shared/AnimatedDiv";
 import HeroSection from "../common/home/HeroSection";
 import ContentsDiv from "../common/shared/ContentsDiv";
-
-const projects = [
-    {
-        id: 1,
-        name: 'SEA-VIEW APARTMENTS',
-        img: [project1, project2, project3],
-        location: 'Kigali, Rwanda',
-        status: 'Completed in 2023',
-        description: 'This residential project is for an urban double family house located in the city of Chalkida. The main idea is to unite the two residences into one discriminated whole so that they are both parts of one concrete volume. Selected parts of the volume are partitioned to establish an indoor-outdoor connection. The different parts of the synthesis are cladded with different materials.'
-    },
-    {
-        id: 2,
-        name: 'GORILLA APARTMENT',
-        img: [project2, project1, project4],
-        location: 'Butare, Rwanda',
-        status: 'Pending',
-        description: 'This residential project is for an urban double family house located in the city of Chalkida. The main idea is to unite the two residences into one discriminated whole so that they are both parts of one concrete volume. Selected parts of the volume are partitioned to establish an indoor-outdoor connection. The different parts of the synthesis are cladded with different materials.'
-    },
-    {
-        id: 3,
-        name: 'GEL BATIMENT',
-        img: [project3, project5, project1],
-        location: 'Butare, Rwanda',
-        status: 'Pending',
-        description: 'This residential project is for an urban double family house located in the city of Chalkida. The main idea is to unite the two residences into one discriminated whole so that they are both parts of one concrete volume. Selected parts of the volume are partitioned to establish an indoor-outdoor connection. The different parts of the synthesis are cladded with different materials.'
-    },
-    {
-        id: 4,
-        name: 'ROUNDED CORNER PLAZA',
-        img: [project4, project5, project2, project3],
-        location: 'Butare, Rwanda',
-        status: 'Pending',
-        description: 'This residential project is for an urban double family house located in the city of Chalkida. The main idea is to unite the two residences into one discriminated whole so that they are both parts of one concrete volume. Selected parts of the volume are partitioned to establish an indoor-outdoor connection. The different parts of the synthesis are cladded with different materials.'
-    },
-    {
-        id: 5,
-        name: 'VILLA APARTMENT',
-        img: [project5, project3, project2, project4],
-        location: 'Butare, Rwanda',
-        status: 'Pending',
-        description: 'This residential project is for an urban double family house located in the city of Chalkida. The main idea is to unite the two residences into one discriminated whole so that they are both parts of one concrete volume. Selected parts of the volume are partitioned to establish an indoor-outdoor connection. The different parts of the synthesis are cladded with different materials.'
-    },
-]
+import { useGetProjects } from "../../../DashBoard/Api/adminAPI";
+import Loading from "../common/shared/Loading";
+import ErrorView from "../common/shared/ErrorView";
 
 const Home = () => {
+    const {isLoading, data, error} = useGetProjects()
+
+    if (isLoading) return < Loading/>;
+    if (error) return <ErrorView error={error} />;
+
     return (
         <div>
-
             <HeroSection />
 
             <ContentsDiv>
@@ -87,7 +51,7 @@ const Home = () => {
                         <h1 className={titleStyles}>FEATURED WORK</h1>
                     </div>
                     <div className="flex flex-col gap-20">
-                        {projects.map((p, index) => <AnimatedDiv><ProjectCard key={p.id} name={p.name} index={index + 1} img={p.img} location={p.location} status={p.status} description={p.description} /></AnimatedDiv>)}
+                        {data && data.length > 0 && data.map((p, index) => <AnimatedDiv><ProjectCard key={p.id} name={p.title} index={index + 1} img={p.images} location={p.location} status={p.status} description={p.description} /></AnimatedDiv>)}
                     </div>
                 </AnimatedDiv>
 

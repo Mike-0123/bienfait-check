@@ -9,7 +9,7 @@ const PageHeader = ({
     description
 }: IPageHeaderProps) => {
     return (
-        <div className="relative isolate overflow-hidden bg-greyTextColor py-24 sm:py-32 mb-1">
+        <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 mb-1">
             <img src={backgroundImage} className="absolute inset-0 -z-10 h-full w-full object-cover opacity-20" />
             <div
                 className='hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl'
@@ -38,7 +38,7 @@ const PageHeader = ({
                     <AnimatedDiv className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
                         {title}
                     </AnimatedDiv>
-                    <AnimatedDiv animationType="fromLeft" className='mt-6 text-lg leading-8 text-greyTextColor200'>{description}</AnimatedDiv>
+                    <AnimatedDiv animationType="fromLeft" className='mt-6 text-lg leading-8 text-gray-300'>{description}</AnimatedDiv>
                 </div>
             </div>
         </div>

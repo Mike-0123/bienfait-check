@@ -6,12 +6,12 @@ const Input = ({ title, placeholder, type, name, className }: IInput) => {
   return (
     <div className={`flex flex-col gap-1 my-2 ${className && className}`}>
       <div className="flex flex-col gap-1">
-        <span className="text-textUserColor">{title}</span>
+        <span className="text-textUserColor text-start dark:text-bgUserColor">{title}</span>
         <input
           type={type}
           placeholder={placeholder}
           {...register(name)}
-          className={`border-2 focus:border-shineColor focus:outline-none rounded-lg px-4 py-2 ${errors[name] ? "border-red-500" : ""
+          className={`border-2 focus:border-shineColor focus:outline-none rounded-lg px-4 py-2 dark:text-textUserColor ${errors[name] ? "border-red-500" : ""
             }`}
         />
       </div>

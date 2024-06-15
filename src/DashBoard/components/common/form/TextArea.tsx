@@ -1,17 +1,16 @@
 import { useFormContext } from "react-hook-form";
 
-const Input = ({ title, placeholder, type, name, className }: IInput) => {
+const TextArea = ({ title, placeholder, name, className }: ITextArea) => {
   const { register, formState: { errors }, } = useFormContext();
 
   return (
     <div className={`flex flex-col gap-1 my-2 ${className && className}`}>
-      <div className="flex flex-col gap-1">
-        <span className="text-textUserColor">{title}</span>
-        <input
-          type={type}
+      <div className="flex flex-col gap-1 ">
+        <span className="text-textUserColor text-start dark:text-bgUserColor">{title}</span>
+        <textarea
           placeholder={placeholder}
           {...register(name)}
-          className={`border-2 focus:border-shineColor focus:outline-none rounded-lg px-4 py-2 ${errors[name] ? "border-red-500" : ""
+          className={`border-2 focus:border-shineColor focus:outline-none rounded-lg px-4 py-2 resize-none dark:text-textUserColor ${errors[name] ? "border-red-500" : ""
             }`}
         />
       </div>
@@ -23,12 +22,11 @@ const Input = ({ title, placeholder, type, name, className }: IInput) => {
   );
 };
 
-export interface IInput {
+export interface ITextArea {
   placeholder?: string;
-  type: string;
   title: string;
   name: string;
   className?: string;
 }
 
-export default Input
+export default TextArea;

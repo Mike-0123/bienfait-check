@@ -1,8 +1,7 @@
-import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { camelCaseToWords } from '../utils';
 
-const Chart = (dashboardData) => {
+const Chart = (dashboardData: any) => {
   const keys = Object.entries(dashboardData).map(([key, value])=>camelCaseToWords(key));
   const data = Object.entries(dashboardData).map(([key, value])=>value);
   const options = {

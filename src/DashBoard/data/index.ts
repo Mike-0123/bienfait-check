@@ -1,5 +1,4 @@
 import sidebarData from './SidebarMenu';
-import {routes} from './routes';
 import {
     dashboardInfo,
     apiFunctions,
@@ -11,7 +10,6 @@ import {
 
 export {
     sidebarData,
-    routes,
     dashboardInfo,
     apiFunctions,
     localApiData,

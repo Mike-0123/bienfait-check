@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import { AdminContextProvider } from './components/DashboardContextProvider';
 
-export const Dashboard = () => {
+
+const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <AdminContextProvider>
@@ -24,3 +25,5 @@ export const Dashboard = () => {
     </AdminContextProvider>
   )
 }
+
+export default Dashboard

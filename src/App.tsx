@@ -10,12 +10,22 @@ import User from "./User"
 import Join from "./components/user/pages/Join"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { routes } from "./DashBoard/data";
+import Dashboard from "./DashBoard/Dashboard";
+import DashboardHome from "./DashBoard/pages/DashboardHome";
+import DashboardLogin  from "./DashBoard/pages/DashboardLogin";
+import AdddProject from "./DashBoard/pages/AddProject";
+import AddAnnouncement from "./DashBoard/pages/AddAnnouncement";
+import AdminAnnouncements from "./DashBoard/pages/AdminAnnouncements";
+import AdminProjects from "./DashBoard/pages/AdminProjects";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 
 function App() {
 
   return (
+    <QueryClientProvider client={queryClient}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<User />}>
@@ -26,16 +36,18 @@ function App() {
           <Route path="join" element={<Join />} />
           <Route path="*" element={<Page404 />} />
         </Route>
-        {routes.map(({ path, element, children }) => (
-          <Route key={path} path={path} element={element()}>
-            {children && children.map(({ path: childPath, element: childElement }) => (
-              <Route key={childPath} path={childPath} element={childElement()} />
-            ))}
-          </Route>
-        ))}
+        <Route path="/admin" element={<Dashboard />}>
+          <Route path="" element={<DashboardHome />} />
+          <Route path="login" element={<DashboardLogin />} />
+          <Route path="projects" element={<AdminProjects />} />
+          <Route path="addProject" element={<AdddProject />} />
+          <Route path="announcements" element={<AdminAnnouncements />} />
+          <Route path="addAnnouncement" element={<AddAnnouncement />} />
+        </Route>
       </Routes>
       <ToastContainer limit={3} />
     </BrowserRouter>
+    </QueryClientProvider>
   )
 }
 
