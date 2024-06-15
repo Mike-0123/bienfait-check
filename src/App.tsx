@@ -10,7 +10,7 @@ import User from "./User"
 import Join from "./components/user/pages/Join"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Admin from "./Admin";
+import { routes } from "./DashBoard/data";
 
 
 function App() {
@@ -19,17 +19,22 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<User />}>
-          <Route path="" element={<Home />}/>
-          <Route path="about" element={<About />}/>
-          <Route path="contact" element={<Contact />}/>
-          <Route path="portfolio" element={<Portfolio />}/>
-          <Route path="join" element={<Join />}/>
-          <Route path="*" element={<Page404 />}/>
+          <Route path="" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="join" element={<Join />} />
+          <Route path="*" element={<Page404 />} />
         </Route>
-        <Route path="/admin" element={<Admin />}>
-        </Route>
+        {routes.map(({ path, element, children }) => (
+          <Route key={path} path={path} element={element()}>
+            {children && children.map(({ path: childPath, element: childElement }) => (
+              <Route key={childPath} path={childPath} element={childElement()} />
+            ))}
+          </Route>
+        ))}
       </Routes>
-      <ToastContainer limit={3}/>
+      <ToastContainer limit={3} />
     </BrowserRouter>
   )
 }
