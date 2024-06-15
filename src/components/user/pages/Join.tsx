@@ -13,6 +13,8 @@ import AnimatedDiv from "../common/shared/AnimatedDiv"
 import Input from "../common/form/Input"
 import TextArea from "../common/form/TextArea"
 import SubmitButton from "../common/form/SubmitButton"
+import { sendJoin } from "../api/userAPI"
+import { getErrorMessage } from "../../../utils/errorHandler"
 
 const Join = () => {
 
@@ -30,14 +32,15 @@ const Join = () => {
     },
   });
 
-  const handleSubmit = (data: any) => {
-    console.log(data);
+  const handleSubmit = async (data: any) => {
     setIsSending(true);
-    setTimeout(() => {
+    try {
+      await sendJoin(data);
       toast.success(`${data.firstName.charAt(0).toUpperCase()}${data.firstName.slice(1)}, your application sent successfully.`);
       formMethods.reset();
-      setIsSending(false);
-    }, 4000);
+    }
+    catch (error) { toast.error(getErrorMessage(error)) }
+    finally { setIsSending(false) }
   };
 
   const roles: IRoleCard[] = [

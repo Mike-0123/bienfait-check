@@ -10,6 +10,7 @@ import User from "./User"
 import Join from "./components/user/pages/Join"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Admin from "./Admin";
 
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
           <Route path="portfolio" element={<Portfolio />}/>
           <Route path="join" element={<Join />}/>
           <Route path="*" element={<Page404 />}/>
+        </Route>
+        <Route path="/admin" element={<Admin />}>
         </Route>
       </Routes>
       <ToastContainer limit={3}/>

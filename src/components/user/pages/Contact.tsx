@@ -15,6 +15,8 @@ import constants from "../../../constants";
 import { FaLocationDot } from "react-icons/fa6";
 import AnimatedDiv from "../common/shared/AnimatedDiv";
 import ContentsDiv from "../common/shared/ContentsDiv";
+import { sendContact } from "../api/userAPI";
+import { getErrorMessage } from "../../../utils/errorHandler";
 
 const Contact = () => {
   const [isSending, setIsSending] = useState(false);
@@ -28,14 +30,15 @@ const Contact = () => {
     },
   });
 
-  const handleSubmit = (data: any) => {
-    console.log(data);
+  const handleSubmit = async (data: any) => {
     setIsSending(true);
-    setTimeout(() => {
+    try {
+      await sendContact(data);
       toast.success(`${data.firstName.charAt(0).toUpperCase()}${data.firstName.slice(1)}, your message sent successfully.`);
       formMethods.reset();
-      setIsSending(false);
-    }, 4000);
+    }
+    catch (error) { toast.error(getErrorMessage(error)) }
+    finally { setIsSending(false) }
   };
 
 
