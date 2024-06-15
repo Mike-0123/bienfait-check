@@ -62,7 +62,7 @@ const Home = () => {
 
             <ContentsDiv>
 
-                <AnimatedDiv className="text-textColor py-10" >
+                <AnimatedDiv className="text-textUserColor py-10" >
                     <h1 className={subTitleStyles}>Welcome to {constants.webInfo.name}</h1>
                     <h1 className={titleStyles}>{constants.webInfo.slogan}</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-4 py-4">
@@ -78,7 +78,7 @@ const Home = () => {
                 <AnimatedDiv className="p-10 bg-white h-[80vh] flex justify-center items-center flex-col gap-8 text-center">
                     <img src={logo} className="w-48" />
                     <p className="text-middleColor text-lg">A network of visionary architects with a passion for <br /> innovative, beautiful and sustainable buildings</p>
-                    <Link to='/about' className="uppercase bg-textColor px-5 py-3 text-bgColor text-xs rounded-md hover:bg-shineColor">ABOUT {constants.webInfo.name}</Link>
+                    <Link to='/about' className="uppercase bg-textUserColor px-5 py-3 text-bgUserColor text-xs rounded-md hover:bg-shineColor">ABOUT {constants.webInfo.name}</Link>
                 </AnimatedDiv>
 
                 <AnimatedDiv className="p-8 lg:px-24">
@@ -91,7 +91,7 @@ const Home = () => {
                     </div>
                 </AnimatedDiv>
 
-                <AnimatedDiv className="text-textColor px-10 mt-3" >
+                <AnimatedDiv className="text-textUserColor px-10 mt-3" >
                     <h1 className={subTitleStyles}>What our clients says</h1>
                     <h1 className={titleStyles}>TESTIMONIALS</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 py-1 mt-10">
@@ -101,7 +101,7 @@ const Home = () => {
                     </div>
                 </AnimatedDiv>
 
-                <AnimatedDiv className=" text-textColor px-10 mt-20">
+                <AnimatedDiv className=" text-textUserColor px-10 mt-20">
                     <h1 className={subTitleStyles}>Our Unique  Approach</h1>
                     <h1 className={titleStyles}>COLLABORATIVE MODEL</h1>
                     <div className="mt-12">

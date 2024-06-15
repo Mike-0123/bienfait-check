@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-30">
     <OwnerInfo />
-    <div className="bg-textColorTransparent text-bgColor w-full flex justify-between items-center h-14 px-4">
+    <div className="bg-textColorTransparent text-bgUserColor w-full flex justify-between items-center h-14 px-4">
       <div className="flex gap-1 items-center justify-center text-sm text-shineColor"><img src={logo} className="w-8 md:w-12 lg:w-16" />{constants.webInfo.name}</div>
       <div className="gap-8 hidden lg:flex">
         {constants.navLinks.map(link => (<Link key={link.lnk} to={link.lnk} className={`uppercase hover:text-shineColor ${currentPath === link.lnk ? 'text-shineColor' : 'text-middleColor'}`}>{link.name}</Link>))}

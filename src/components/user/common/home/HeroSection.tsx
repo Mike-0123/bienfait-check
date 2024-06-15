@@ -4,7 +4,7 @@ import constants from "../../../../constants";
 
 const HeroSection = () => {
   return (
-    <div className="relative h-[88vh] flex flex-col justify-center items-center text-bgColor overflow-hidden">
+    <div className="relative h-[88vh] flex flex-col justify-center items-center text-bgUserColor overflow-hidden">
       <motion.img
         src={hero}
         alt="Hero"

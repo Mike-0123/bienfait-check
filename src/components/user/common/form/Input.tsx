@@ -5,7 +5,7 @@ const Input = ({ title, placeholder, type, name, className }: IInput) => {
 
   return (
     <div className={`flex flex-col gap-1 my-2 ${className && className}`}>
-      <span className="text-textColor">{title}</span>
+      <span className="text-textUserColor">{title}</span>
       <input
         type={type}
         placeholder={placeholder}
