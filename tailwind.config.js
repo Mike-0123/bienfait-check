@@ -20,6 +20,9 @@ module.exports = {
         textUserColor: '#000',
         textColorTransparent: 'rgba(0, 0, 0, 0.9)',
         middleColor: 'grey',
+        greyTextColor: '#292828',
+        greyTextColor200: '#7a7977',
+
         shineColor: '#54acc4',
         bgColor: '#1f2937',
         bgColor2: '#111827',

@@ -114,7 +114,7 @@ const Join = () => {
         <h1 className={subTitleStyles}>{constants.webInfo.name} Family</h1>
         <h1 className={titleStyles}>BECOME AN ASSOCIATE</h1>
         <AnimatedDiv className="relative mx-auto w-11/12 md:w-8/12 lg:w-2/3 mt-3">
-          <div className="absolute top-0 left-0 w-full h-2 bg-gray-800 rounded-t"></div>
+          <div className="absolute top-0 left-0 w-full h-2 bg-greyTextColor rounded-t"></div>
           <div className="bg-bgUserColor shadow-middleColor shadow-2xl wfull p-2 rounded-md px-3">
             <h1 className={h1Styles}>APPLY NOW</h1>
             <p className={pSmallStyles}>

@@ -25,7 +25,7 @@ const CountryDropdown = () => {
         {countries.map((country) => (
           <li
             key={country}
-            className="flex items-center p-2 cursor-pointer hover:bg-gray-100"
+            className="flex items-center p-2 cursor-pointer hover:bg-greyTextColor200"
             onClick={() => handleSelect(country)}
           >
             <CountryFlag countryCode={country} className="w-8 h-8" />

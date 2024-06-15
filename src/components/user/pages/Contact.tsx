@@ -51,7 +51,7 @@ const Contact = () => {
       />
       <ContentsDiv>
         <AnimatedDiv className="relative mx-auto w-11/12 md:w-8/12 lg:w-1/2 mt-3">
-          <div className="absolute top-0 left-0 w-full h-2 bg-gray-800 rounded-t"></div>
+          <div className="absolute top-0 left-0 w-full h-2 bg-greyTextColor rounded-t"></div>
           <div className="bg-bgUserColor shadow-middleColor shadow-2xl wfull p-2 rounded-md px-3">
             <h1 className={h1Styles}>EMAIL US</h1>
             <p className={pSmallStyles}>
