@@ -6,7 +6,7 @@ import { FaCloudUploadAlt, FaSpinner } from 'react-icons/fa';
 import Input from '../components/common/form/Input';
 import SubmitButton from '../components/common/form/SubmitButton';
 import { addProjectSchema } from '../components/utils/validations';
-import { addProjectApi } from '../Api/adminAPI';
+import { useAddProject } from '../Api/adminAPI';
 import { convertBase64, commonStyleClasses } from '../components/utils';
 import TextArea from '../components/common/form/TextArea';
 import { getErrorMessage } from '../../utils/errorHandler';
@@ -14,6 +14,7 @@ import { useNavigate } from 'react-router-dom';
 
 const AddProject = () => {
   const navigate = useNavigate()
+  const addProjectMutation = useAddProject();
   const [projectImages, setProjectImages] = useState([]);
   const [addingProject, setAddingProject] = useState(false);
   const [resetImageInfo, setResetImageInfo] = useState(false);
@@ -40,7 +41,7 @@ const AddProject = () => {
 
     setAddingProject(true);
     try {
-      await addProjectApi({
+      await addProjectMutation.mutateAsync({
         ...data,
         images: projectImages
       });

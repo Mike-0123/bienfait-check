@@ -6,7 +6,7 @@ import { FaCloudUploadAlt, FaSpinner } from 'react-icons/fa';
 import Input from '../components/common/form/Input';
 import SubmitButton from '../components/common/form/SubmitButton';
 import { addAnnouncementSchema } from '../components/utils/validations';
-import { addAnnouncementApi } from '../Api/adminAPI';
+import { useAddAnnouncement } from '../Api/adminAPI';
 import { convertBase64, commonStyleClasses } from '../components/utils';
 import TextArea from '../components/common/form/TextArea';
 import { getErrorMessage } from '../../utils/errorHandler';
@@ -14,6 +14,7 @@ import { useNavigate } from 'react-router-dom';
 
 const AddAnnouncement = () => {
   const navigate = useNavigate()
+  const addAnnouncementMutation = useAddAnnouncement()
   const [announcementImage, setAnnouncementImage] = useState(null);
   const [addingAnnouncement, setAddingAnnouncement] = useState(false);
 
@@ -35,7 +36,7 @@ const AddAnnouncement = () => {
     setAddingAnnouncement(true);
     try {
       const imageBase64 = await convertBase64(announcementImage);
-      await addAnnouncementApi({
+      await addAnnouncementMutation.mutateAsync({
         ...data,
         image: imageBase64
       });

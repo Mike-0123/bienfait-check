@@ -74,18 +74,18 @@ const Join = () => {
         description={`Interested in joining the ${constants.webInfo.name} team as a local or remote collaborator?`}
       />
       <ContentsDiv>
-        <AnimatedDiv className="mb-5 w-8/12">
+        <AnimatedDiv className="mb-5 w-8/12 ml-6">
           <h1 className={`${subTitleStyles} text-start my-4`}>Our Unique Model</h1>
           <p className="font-medium text-lg">We collaborate with like-minded architects and other associates, both locally and remotely, to inspire an amalgamation of creative styles, technical skills, and innovative visions that provide a unique, collective and powerful architectural service to all our clients.</p>
         </AnimatedDiv>
         <hr />
-        <AnimatedDiv className="w-full flex py-3 my-4">
-          <div className="w-1/2">
+        <AnimatedDiv className="w-full flex flex-col lg:flex-row gap-8 lg:gap-0 py-3 my-4 lg:my-4 lg:justify-center pl-6 lg:pl-0">
+          <div className="w-10/12 lg:w-1/2">
             <h1 className={h1Styles}>Our Values</h1>
             <p className="text-wrap w-10/12 text-middleColor">We love to associate ourselves with other professionals that share the same vision, philosophy and values.</p>
           </div>
-          <div className="w-1/2">
-            <ol className="list-decimal text-lg font-bold flex flex-col gap-2 text-nowrap">
+          <div className="w-10/12 lg:w-1/2">
+            <ol className="list-decimal text-lg font-semi-bold flex flex-col gap-2 text-nowrap pl-5 lg:pl-0">
               <li>Be visionary</li>
               <li>Practice kindness</li>
               <li>Target innovation</li>
@@ -97,8 +97,8 @@ const Join = () => {
           </div>
         </AnimatedDiv>
         <hr />
-        <AnimatedDiv className="w-full flex py-3">
-          <div className="w-1/2">
+        <AnimatedDiv className="w-full flex flex-col lg:flex-row gap-8 lg:gap-0 py-3 my-6 lg:my-4 lg:justify-center pl-6 lg:pl-0">
+          <div className="w-10/12 lg:w-1/2">
             <h1 className={h1Styles}>Open Roles</h1>
             <p className="text-wrap w-10/12 text-middleColor my-4">
               We offer collaboration and employment opportunities both locally and remotely.
@@ -106,7 +106,7 @@ const Join = () => {
               Don't worry, send us your application and our team will advise you whether your services would be a good extension to the Blackbox team.
             </p>
           </div>
-          <div className="w-1/2">
+          <div className="w-10/12 lg:w-1/2">
             {roles.map((role, index) => <AnimatedDiv><RoleCard key={index} title={role.title} roleType={role.roleType} description={role.description} /></AnimatedDiv>)}
           </div>
         </AnimatedDiv>

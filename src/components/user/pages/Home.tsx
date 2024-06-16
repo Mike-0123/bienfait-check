@@ -12,6 +12,7 @@ import HeroSection from "../common/home/HeroSection";
 import ContentsDiv from "../common/shared/ContentsDiv";
 import { useGetProjects } from "../../../DashBoard/Api/adminAPI";
 import ErrorView from "../common/shared/ErrorView";
+import LoadingData from "../common/shared/LoadingData";
 
 const Home = () => {
     const {isLoading, data, error} = useGetProjects()
@@ -51,7 +52,7 @@ const Home = () => {
                     <div className="flex flex-col gap-20">
                         {data && data.length > 0 && data.map((p, index) => <AnimatedDiv><ProjectCard key={p.id} name={p.title} index={index + 1} img={p.images} location={p.location} status={p.status} description={p.description} /></AnimatedDiv>)}
                     </div>
-                    {isLoading && <p>Loading data.</p>}
+                    {isLoading && <LoadingData title="Projects" />}
                 </AnimatedDiv>
 
                 <AnimatedDiv className="text-textUserColor px-10 mt-3" >
