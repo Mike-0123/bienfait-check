@@ -24,7 +24,7 @@ import join_bg from './join_bg.jpeg';
 import portfolio_bg from './portfolio_bg.jpeg';
 import about_bg from './about_bg.jpeg';
 
-import about1 from './about/about1.jpeg';
+import about1 from './about/about1.jpg';
 import about3 from './about/about3.jpg';
 import about4 from './about/about4.jpg';
 

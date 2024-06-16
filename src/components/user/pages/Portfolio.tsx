@@ -6,16 +6,12 @@ import AnimatedDiv from "../common/shared/AnimatedDiv";
 import ContentsDiv from "../common/shared/ContentsDiv";
 import ErrorView from "../common/shared/ErrorView";
 import ImgCarousel from "../common/shared/ImgCarousel";
-import Loading from "../common/shared/Loading";
 import LoadingData from "../common/shared/LoadingData";
 import PageHeader from "../common/shared/PageHeader";
 
 const Portfolio = () => {
 
   const { isLoading, data, error } = useGetProjects();
-
-  if (isLoading) return < Loading />;
-  if (error) return <ErrorView error={error} />;
 
   return (
     <div className="mb-6">
@@ -30,6 +26,7 @@ const Portfolio = () => {
           <h1 className={titleStyles}>PROJECT GALLERY</h1>
         </AnimatedDiv>
         {isLoading && <LoadingData title="Portfolio" />}
+        {error && <ErrorView error={error} />}
         <AnimatedDiv className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {data && data.length > 0 && data.map(d => d.images).map((portfolio, index) => (
             <div className="w-full bg-cover bg-center rounded-lg max-h-96 overflow-hidden shadow-md shadow-shineColor " style={{ backgroundImage: `url(${portfolio[0]})` }}>

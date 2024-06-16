@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,6 +13,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Loading from './components/user/common/shared/Loading';
+import { disableDevTools } from './DashBoard/components/utils';
 
 const Dashboard = React.lazy(() => import('./DashBoard/Dashboard'));
 const DashboardHome = React.lazy(() => import('./DashBoard/pages/DashboardHome'));
@@ -25,6 +26,7 @@ const AdminProjects = React.lazy(() => import('./DashBoard/pages/AdminProjects')
 const queryClient = new QueryClient();
 
 function App() {
+  useEffect(()=>{disableDevTools()}, []);
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
