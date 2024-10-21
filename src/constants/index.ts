@@ -1,16 +1,19 @@
 const webInfo = {
     name: "Spartial Engineering Group",
-    phone: "735177666",
-    whatsappText: "Hello xxx I am from your website Spartial Engineering, can we talk?",
-    slogan: "We make your dreams come true",
+    phone: "788208488",
+    whatsappText: "Hello Spartial Engineering Group, I am from your website, can we talk?",
+    slogan: "We bring your vision to life, Good design last forever",
     location: "KG 774 St, Kigali-Rwanda",
-    email: "email@gmail.com",
+    email: "spartialengineeringltd@gmail.com",
     ownerNames: "ENGINEER Samuel",
 }
 
 const applyRequirements = {
-  experience: '7 Years',
-  softwares: 'BIM, Rhino and AutoCad.',
+  experience_2: '2 Years',
+  experience: '3 Years',
+  softwares: 'AutoCad, Archicad and Lumion',
+  softwares_2: 'AutoCad and Prota',
+  softwares_3: 'Archicad and AutoCad',
 }
 
 const navLinks = [

@@ -29,18 +29,18 @@ const Home = () => {
                     <h1 className={subTitleStyles}>Welcome to {constants.webInfo.name}</h1>
                     <h1 className={titleStyles}>{constants.webInfo.slogan}</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-4 py-4">
-                        <Card title='Pre-Design Planning' description="Consultation, master planning and research." number={1} img={card1} />
+                        <Card title='Pre-Design Planning' description="Master plan and zoning analysis." number={1} img={card1} />
                         <Card title='Architectural Design' description="Design, technical drawings and 3D visualisation" number={2} img={card2} />
                         <Card title='Project Consulting and construction' description="Contract negotiations and project administration" number={3} img={card3} />
-                        <Card title='Land Survery' description="Contract negotiations and project administration" number={4} img={card4} />
-                        <Card title='Interior Design' description="Contract negotiations and project administration" number={5} img={card5} />
-                        <Card title='Real Estate' description="Contract negotiations and project administration" number={6} img={card6} />
+                        <Card title='Land Survery & Land subdivision' description="Land subdivision, Topographic map" number={4} img={card4} />
+                        <Card title='Interior Design' description="Interial arrangement and 3D visualization" number={5} img={card5} />
+                        <Card title='Real Estate' description="Real estate design, contruction and management" number={6} img={card6} />
                     </div>
                 </AnimatedDiv>
 
                 <AnimatedDiv className="p-10 bg-white h-[80vh] flex justify-center items-center flex-col gap-8 text-center">
                     <img src={logo} className="w-48" />
-                    <p className="text-middleColor text-lg">A network of visionary architects with a passion for <br /> innovative, beautiful and sustainable buildings</p>
+                    <p className="text-middleColor text-lg">A network of visionary architects designer and engineers</p>
                     <Link to='/about' className="uppercase bg-textUserColor px-5 py-3 text-bgUserColor text-xs rounded-md hover:bg-shineColor">ABOUT {constants.webInfo.name}</Link>
                 </AnimatedDiv>
 

@@ -3,7 +3,7 @@ import { logo } from '../components/assets'
 const dashboardInfo = {
     userTitle: 'Admin',
     name: 'Admin Dashboard',
-    serverLink: "http://localhost:9090/",
+    serverLink: "https://api.spartial-engineering-group.com/",
     tokenName: "adminToken",
     webStatus: "production",
     localStoragePrefix: "Admin",

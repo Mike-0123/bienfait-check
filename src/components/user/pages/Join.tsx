@@ -50,19 +50,19 @@ const Join = () => {
       description: `Candidate will be located in our offices in ${constants.webInfo.location}. Minimum ${constants.applyRequirements.experience} of experience. Must be competent in architectural synthesis and fluent with the following software: ${constants.applyRequirements.softwares}`
     },
     {
-      title: "Architect",
+      title: "Structural",
       roleType: RoleTypeEnum.PART_TIME,
-      description: `Candidate will be located in our offices in ${constants.webInfo.location} or remotely. Minimum ${constants.applyRequirements.experience} of experience. Must be competent in architectural synthesis and fluent with the following software: ${constants.applyRequirements.softwares}`
+      description: `Candidate will be located in our offices in ${constants.webInfo.location} or remotely. Minimum ${constants.applyRequirements.experience} of experience. Must be competent in architectural synthesis and fluent with the following software: ${constants.applyRequirements.softwares_2}`
     },
     {
       title: "3D Designer",
       roleType: RoleTypeEnum.PART_TIME,
-      description: `Candidate will be located in our offices in ${constants.webInfo.location} or can work remotely. Must be competent in architectural visualisation and graphic design.`
+      description: `Candidate will be located in our offices in ${constants.webInfo.location} or can work remotely. Must be competent in architectural visualisation and 3D rendering.`
     },
     {
       title: "Architectectural Draftsman",
       roleType: RoleTypeEnum.FULL_TIME,
-      description: `Candidate will be located in our offices in ${constants.webInfo.location}. Minimum ${constants.applyRequirements.experience} of experience.  Must be competent in architectural drawings and fluent with the following software: ${constants.applyRequirements.softwares}`
+      description: `Candidate will be located in our offices in ${constants.webInfo.location}. Minimum ${constants.applyRequirements.experience_2} of experience.  Must be competent in architectural drawings and fluent with the following software: ${constants.applyRequirements.softwares_3}`
     }
   ]
 
