@@ -22,6 +22,7 @@ const TopAnnouncements = () => {
                 {
                     autoClose: 5000,
                     hideProgressBar: true,
+                    position: 'bottom-center',
                     onClose: () => {
                         setTimeout(() => setTriggered(false), Math.random() * 10000 + 5000);
                     },

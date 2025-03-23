@@ -76,7 +76,9 @@ const Join = () => {
       <ContentsDiv>
         <AnimatedDiv className="mb-5 w-8/12 ml-6">
           <h1 className={`${subTitleStyles} text-start my-4`}>Our Unique Model</h1>
-          <p className="font-medium text-lg">We collaborate with like-minded architects and other associates, both locally and remotely, to inspire an amalgamation of creative styles, technical skills, and innovative visions that provide a unique, collective and powerful architectural service to all our clients.</p>
+          <p className="font-medium text-lg">
+          We partner with like-minded architects and industry associates, both locally and remotely, to foster a seamless integration of creative design, technical expertise, and innovative vision. This collaborative approach enables us to deliver exceptional, dynamic, and high-quality architectural solutions tailored to our clients' unique needs.
+          </p>
         </AnimatedDiv>
         <hr />
         <AnimatedDiv className="w-full flex flex-col lg:flex-row gap-8 lg:gap-0 py-3 my-4 lg:my-4 lg:justify-center pl-6 lg:pl-0">

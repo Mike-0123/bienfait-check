@@ -7,7 +7,7 @@ import constants from '../../../../constants';
 
 const CountryDropdown = () => {
     const countries = constants.countries;
-  const [selectedCountry, setSelectedCountry] = useState(countries[1]);
+  const [selectedCountry, setSelectedCountry] = useState(countries[0]);
   const [hidden, setHidden] = useState(true);
 
   const handleSelect = (country: any) => {

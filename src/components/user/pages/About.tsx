@@ -15,11 +15,11 @@ const abouts: IAboutCard[] = [
   {
     index: 1,
     title: constants.webInfo.ownerNames,
-    subTitle: 'Managing Architect',
+    subTitle: 'Founder & Managing Director',
     img: about1,
     btnText: `CONNECT WITH ${constants.webInfo.ownerNames.toUpperCase()}`,
     btnLnk: socialMediaLinks.linkedIn,
-    description: 'This residential project is for an urban double family house located in the city of Chalkida. The main idea is to unite the two residences into one discriminated whole so that they are both parts of one concrete volume. Selected parts of the volume are partitioned to establish an indoor-outdoor connection. The different parts of the synthesis are cladded with different materials.'
+    description:'With 15 years of experience in engineering, S. Bienfait provides strategic direction to SPARTIAL ENGINEERING GROUP LTD, driving innovation, efficiency, and excellence. His expertise ensures high-quality solutions, sustainable growth, and industry-leading standards in every project.'
   },
   {
     index: 2,
@@ -28,7 +28,7 @@ const abouts: IAboutCard[] = [
     img: logo,
     btnText: `OUR PORTFOLIO`,
     btnLnk: '/portfolio',
-    description: `Architectural design requires an intricate synthesis of the key parameters of architectonics - functional, aesthetic, psychosocial and techno-economic. An innovative architect handles such design problems in the “${constants.webInfo.name}” of their mind to bring a creative explosion where unique architectural solutions emerge. At ${constants.webInfo.name}, we live by the principles of innovation and creative thinking and aim to develop unique designs that are not only beautiful but also inventive.`
+    description: `Architectural design and on-site engineering must work in harmony to create environments that are not only functional and aesthetically refined but also sustainable and structurally sound. At SPARTIAL ENGINEERING GROUP LTD, we believe in a design approach driven by purpose, context, and innovation, while our engineering expertise ensures precise execution, material efficiency, and adaptive problem-solving. This synergy allows us to deliver spaces that are safe, efficient, and inspiring—built to enhance both human experience and the environment.`
   },
   {
     index: 3,
@@ -37,7 +37,7 @@ const abouts: IAboutCard[] = [
     img: about3,
     btnText: `JOIN US NOW`,
     btnLnk: '/join',
-    description: `Having understood the complexity of client requirements and diversity of design solutions, Evita developed the ${constants.webInfo.name} collaboration system which brings multiple like-minded architects and associates together to provide a hollistic service to clients. This innovative business structure provides clients with the unique benefit of a collaborative solution that unifies the strengths, know-how and creativity of multiple industry professionals within a single service.`
+    description: `At SPARTIAL ENGINEERING GROUP LTD, collaboration is the foundation of innovation and excellence. We engage seamlessly with architects, engineers, developers, and clients, ensuring a multidisciplinary approach that integrates design vision, technical precision, and sustainable solutions. Through strategic partnerships and open communication, we tackle complex challenges efficiently, delivering high-performance, functional, and inspiring built environments that stand the test of time.`
   },
   {
     index: 4,
@@ -53,7 +53,7 @@ const abouts: IAboutCard[] = [
 const services: IServceCard[] = [
   {
     title: 'Pre-Design Consultation',
-    description: 'Detailed consultation to help define the purpose and basic requirements of the project followed by pre-design services such master planning and research of the site and building.',
+    description: 'Our pre-design consultation ensures clear vision and strategic planning. We assess client needs, site conditions, budget, and sustainability goals, offering expert guidance on feasibility, design concepts, engineering solutions, and land subdivision to create efficient and high-quality developments.',
     icon: <FaLightbulb size={64} />
   },
   {

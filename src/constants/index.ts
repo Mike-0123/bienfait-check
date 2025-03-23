@@ -5,7 +5,7 @@ const webInfo = {
     slogan: "We bring your vision to life, Good design last forever",
     location: "KG 774 St, Kigali-Rwanda",
     email: "spartialengineeringltd@gmail.com",
-    ownerNames: "ENGINEER Samuel",
+    ownerNames: "S. Bienfait",
 }
 
 const applyRequirements = {
