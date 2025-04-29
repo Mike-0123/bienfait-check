@@ -60,7 +60,7 @@ const Home = () => {
                     <h1 className={titleStyles}>TESTIMONIALS</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 py-1 mt-10">
                         <TestimonyCard name="NTUYENABO JEAN BOSCO" title='BUSINESS MAN' testimony="Best Architecture company I've ever seen." img={person1} />
-                        <TestimonyCard name="Fabrice" title='CIVIL & CONSULTING ENGINEER' testimony="At first I hestated but you confirmed me." img={person1} />
+                        <TestimonyCard name="FABRICE" title='CIVIL & CONSULTING ENGINEER' testimony="At first I hestated but you confirmed me." img={person1} />
                         <TestimonyCard name="UZABUMUGABO VILGILE" title='OXFAM MEMBER' testimony="Awesome company" img={person1} />
                     </div>
                 </AnimatedDiv>

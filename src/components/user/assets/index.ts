@@ -3,12 +3,12 @@ import logo from './logo.png';
 import footerImg from './footerImg.jpg';
 import hero from './hero.jpeg';
 import bg from './bg.jpg';
-import card1 from './cards/card1.jpg';
-import card2 from './cards/card2.jpg';
-import card3 from './cards/card3.jpg';
+import card1 from './cards/card1.png';
+import card2 from './cards/card2.png';
+import card3 from './cards/card3.png';
 import card6 from './cards/card6.jpg';
 import card5 from './cards/card5.png';
-import card4 from './cards/card4.jpg';
+import card4 from './cards/card4.png';
 
 import project1 from './projects/project1.jpg';
 import project2 from './projects/project2.jpg';
@@ -16,7 +16,7 @@ import project3 from './projects/project3.jpg';
 import project4 from './projects/project4.jpeg';
 import project5 from './projects/project5.jpg';
 
-import person1 from './testimony/person1.jpeg';
+import person1 from './testimony/person1.webp';
 import collab from './collab.jpg';
 
 import contact_bg from './contact_bg.jpeg';
@@ -25,7 +25,7 @@ import portfolio_bg from './portfolio_bg.jpeg';
 import about_bg from './about_bg.jpeg';
 
 import about1 from './about/about1.jpg';
-import about3 from './about/about3.jpg';
+import about3 from './about/about3.png';
 import about4 from './about/about4.jpg';
 
 export {
