@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom'
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 import { ISocialMedia } from '../../../types'
 
 export const socialMediaLinks = {
-    linkedIn: 'https://linkedin.com/username',
-    facebook: 'https://facebook.com/username',
-    instagram: 'https://instagram.com/username'
+    twitter: 'https://linkedin.com/username',
+    facebook: 'https://www.facebook.com/profile.php?id=100077757162113',
+    instagram: 'https://www.instagram.com/spartial_engineering_group'
 }
 
 const socialMedias: ISocialMedia[] = [
     {
-        icon: <FaLinkedin size={24} />,
-        lnk: socialMediaLinks.linkedIn
+        icon: <FaTwitter size={24} />,
+        lnk: socialMediaLinks.twitter
     },
     {
         icon: <FaFacebook size={24} />,
