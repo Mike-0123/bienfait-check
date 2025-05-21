@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 import { ISocialMedia } from '../../../types'
 
 export const socialMediaLinks = {
-    twitter: 'https://linkedin.com/username',
+    twitter: 'https://x.com/SpartialEnginer',
     facebook: 'https://www.facebook.com/profile.php?id=100077757162113',
     instagram: 'https://www.instagram.com/spartial_engineering_group'
 }
