@@ -37,9 +37,7 @@ const HeroSection = () => {
           rel="noopener noreferrer"
           className="mt-6 flex flex-col items-center"
         >
-          <p className="text-sm sm:text-base md:text-lg text-white mb-3 text-center">
-            Verified by IER (Institute of Engineers in Rwanda)
-          </p>
+          
           <motion.img
             src={verfied}
             alt="Verified by Government"
@@ -48,6 +46,9 @@ const HeroSection = () => {
             animate={{ scale: [0.9, 1.15, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
+          <p className="text-sm sm:text-base md:text-lg text-white mb-3 text-center">
+            Verified by IER (Institute of Engineers in Rwanda)
+          </p>
         </a>
 
         {/* More Section */}
