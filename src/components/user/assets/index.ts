@@ -27,6 +27,7 @@ import about_bg from './about_bg.jpeg';
 import about1 from './about/collab.jpg';
 import about3 from './about/about3.png';
 import about4 from './about/about4.jpg';
+import verfied from './verfied.gif'
 
 export {
     logo,
@@ -54,4 +55,5 @@ export {
     about1,
     about3,
     about4,
+    verfied
 }

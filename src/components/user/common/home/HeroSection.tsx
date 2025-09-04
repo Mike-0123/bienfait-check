@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { hero } from "../../assets";
+import { hero, verfied } from "../../assets";
 import constants from "../../../../constants";
 
 const HeroSection = () => {
@@ -20,31 +20,37 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black opacity-60"></div>
       
       <div className="z-10 flex flex-col items-center gap-2 sm:gap-3 md:gap-4 px-4">
+        {/* Website Name */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-8xl uppercase font-bold text-white text-center leading-tight">
           {constants.webInfo.name}
         </h1>
-        <p className="text-sm sm:text-base md:text-lg text-white text-center">
+
+        {/* Slogan */}
+        <p className="text-sm sm:text-base md:text-lg lg:text-2xl  text-white text-center">
           {constants.webInfo.slogan}
         </p>
 
-        {/* Verified Badge */}
+        {/* ✅ Verified Badge (bigger image) */}
         <a 
           href="https://www.engineersrwanda.rw/ier-compliant-firms" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="mt-4 flex flex-col items-center"
+          className="mt-6 flex flex-col items-center"
         >
+          <p className="text-sm sm:text-base md:text-lg text-white mb-3 text-center">
+            Verified by IER (Institute of Engineers in Rwanda)
+          </p>
           <motion.img
-            src="https://cdn.dribbble.com/users/514480/screenshots/1605357/certified---dribbble.gif"
+            src={verfied}
             alt="Verified by Government"
-            className="w-32 sm:w-40 md:w-48 opacity-80"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: [0.8, 1, 0.9] }}
+            className="w-64 sm:w-72 md:w-80 opacity-100 bg-transparent"
+            initial={{ scale: 0.9 }}
+            animate={{ scale: [0.9, 1.15, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
-          <p className="text-xs sm:text-sm text-white mt-2">Verified by Government</p>
         </a>
 
+        {/* More Section */}
         <div className="absolute bottom-8 flex items-center justify-center transform rotate-90">
           <p className="text-base sm:text-lg text-white">More</p>
           <div className="w-8 sm:w-12 h-0.5 bg-white ml-2"></div>
@@ -55,5 +61,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-
