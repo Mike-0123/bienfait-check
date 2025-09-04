@@ -15,7 +15,7 @@ const OwnerInfo = () => {
                 <Link 
                     className="hidden md:flex items-center gap-1 px-2 py-0.5 bg-white border border-red-600 text-red-600 rounded-full font-semibold text-xs"
                     target='_blank' 
-                    to="https://www.rdb.rw/investors/verified-companies/"
+                    to="https://www.engineersrwanda.rw/ier-compliant-firms"
                 >
                     <BsPatchCheckFill size={16} /> <span>Verified</span>
                 </Link>

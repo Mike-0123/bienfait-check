@@ -7,7 +7,7 @@ export const socialMediaLinks = {
     twitter: 'https://x.com/SpartialEnginer',
     facebook: 'https://www.facebook.com/profile.php?id=100077757162113',
     instagram: 'https://www.instagram.com/spartial_engineering_group',
-    verified: 'https://www.rdb.rw/investors/verified-companies/'
+    verified: 'https://www.engineersrwanda.rw/ier-compliant-firms'
 }
 
 const socialMedias: ISocialMedia[] = [

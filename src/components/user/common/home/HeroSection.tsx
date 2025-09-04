@@ -29,7 +29,7 @@ const HeroSection = () => {
 
         {/* Verified Badge */}
         <a 
-          href="YOUR_VERIFICATION_LINK_HERE" 
+          href="https://www.engineersrwanda.rw/ier-compliant-firms" 
           target="_blank" 
           rel="noopener noreferrer"
           className="mt-4 flex flex-col items-center"
