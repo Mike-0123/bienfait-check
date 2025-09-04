@@ -1,7 +1,7 @@
 import { pSmallStyles } from "../../../styles"
 import { IAboutCard } from "../../../types"
 import Button from "../form/Button"
-import TeamSection from "./TeamSection"
+
 
 const AboutCard = ({ index, img, subTitle, btnText, btnLnk, description, title }: IAboutCard) => {
     return (
@@ -20,7 +20,7 @@ const AboutCard = ({ index, img, subTitle, btnText, btnLnk, description, title }
                 </div>
             </div>
         </div>
-  <TeamSection/>
+
   </>
 
 

@@ -1,15 +1,16 @@
-import { FaBuilding, FaLightbulb, FaPencilAlt, FaToolbox } from "react-icons/fa"
-import constants from "../../../constants"
-import { subTitleStyles, titleStyles } from "../../styles"
-import { IAboutCard, IServceCard } from "../../types"
-import { about1, about3, about4, about_bg, logo } from "../assets"
-import AboutCard from "../common/cards/AboutCard"
-import AnimatedDiv from "../common/shared/AnimatedDiv"
-import PageHeader from "../common/shared/PageHeader"
-import { socialMediaLinks } from "../common/shared/SocialMedia"
-import ServiceCard from "../common/cards/ServiceCard"
-import { FaBookBookmark, FaNoteSticky } from "react-icons/fa6"
-import ContentsDiv from "../common/shared/ContentsDiv"
+import { FaBuilding, FaLightbulb, FaPencilAlt, FaToolbox } from "react-icons/fa";
+import constants from "../../../constants";
+import { subTitleStyles, titleStyles } from "../../styles";
+import { IAboutCard, IServceCard } from "../../types";
+import { about1, about3, about4, about_bg, logo } from "../assets";
+import AboutCard from "../common/cards/AboutCard";
+import AnimatedDiv from "../common/shared/AnimatedDiv";
+import PageHeader from "../common/shared/PageHeader";
+import { socialMediaLinks } from "../common/shared/SocialMedia";
+import ServiceCard from "../common/cards/ServiceCard";
+import { FaBookBookmark, FaNoteSticky } from "react-icons/fa6";
+import ContentsDiv from "../common/shared/ContentsDiv";
+import TeamSection from "../common/cards/TeamSection"; // <-- import TeamSection here
 
 const abouts: IAboutCard[] = [
   {
@@ -48,7 +49,7 @@ const abouts: IAboutCard[] = [
     btnLnk: '/contact',
     description: `The ${constants.webInfo.name} studio is located in ${constants.webInfo.location} and prides itself as a modern and creative environment for creative thinking and unique design solutions. The office houses a number of local employees and is reinforced further by the company's unique collaboration system that comprises a wide network of remote architects and other associates that fully extend the capabilities of the company into the full ${constants.webInfo.name} service.`
   }
-]
+];
 
 const services: IServceCard[] = [
   {
@@ -58,12 +59,12 @@ const services: IServceCard[] = [
   },
   {
     title: 'Design Development',
-    description: 'Evolving the client brief from rough sketches to a full set of plans and elevations demonstrating the final form of the building along with the indicative costs of construction.',
+    description: 'Evolving the client brief from rough sketches to a full set of plans and elevations demonstrating the final form of the building along with the indicative costs of construction.',
     icon: <FaPencilAlt size={64} />
   },
   {
     title: '3D Visualisation',
-    description: 'Converting plans and elevations into 3-dimensional renders of the building façade and surrounding environment as a clear visualisation of the final aesthetic, form and materials.',
+    description: 'Converting plans and elevations into 3-dimensional renders of the building façade and surrounding environment as a clear visualisation of the final aesthetic, form and materials.',
     icon: <FaBuilding size={64} />
   },
   {
@@ -80,8 +81,8 @@ const services: IServceCard[] = [
     title: 'Contract Administration',
     description: 'Acting as an agent and advisor to the client during construction in order to ensure that the project is built in accordance with the construction drawings and specifications.',
     icon: <FaToolbox size={64} />
-  },
-]
+  }
+];
 
 const About = () => {
   return (
@@ -100,7 +101,21 @@ const About = () => {
             <h1 className={titleStyles}>ABOUT US</h1>
           </div>
           <div className="flex flex-col gap-20">
-            {abouts.map((a) => <AnimatedDiv><AboutCard title={a.title} subTitle={a.subTitle} index={a.index} btnText={a.btnText} btnLnk={a.btnLnk} description={a.description} img={a.img} /></AnimatedDiv>)}
+            {abouts.map((a, i) => (
+              <AnimatedDiv key={i}>
+                <AboutCard
+                  title={a.title}
+                  subTitle={a.subTitle}
+                  index={a.index}
+                  btnText={a.btnText}
+                  btnLnk={a.btnLnk}
+                  description={a.description}
+                  img={a.img}
+                />
+                {/* Render TeamSection under Founder card */}
+                {i === 0 && <TeamSection />}
+              </AnimatedDiv>
+            ))}
           </div>
         </AnimatedDiv>
 
@@ -110,13 +125,21 @@ const About = () => {
             <h1 className={titleStyles}>OUR SERVICES</h1>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-            {services.map((s, index) => <AnimatedDiv><ServiceCard title={s.title} key={index} description={s.description} icon={s.icon} /></AnimatedDiv>)}
+            {services.map((s, index) => (
+              <AnimatedDiv key={index}>
+                <ServiceCard
+                  title={s.title}
+                  description={s.description}
+                  icon={s.icon}
+                />
+              </AnimatedDiv>
+            ))}
           </div>
         </AnimatedDiv>
 
-      </ContentsDiv >
+      </ContentsDiv>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
