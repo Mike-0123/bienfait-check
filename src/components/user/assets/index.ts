@@ -22,13 +22,14 @@ import collab from './collab.jpg';
 import contact_bg from './contact_bg.jpeg';
 import join_bg from './join_bg.jpeg';
 import portfolio_bg from './portfolio_bg.jpeg';
-import about_bg from './about_bg.jpeg';
+import about_bg from './about_bg.jpg';
 
 import about1 from './about/collab.jpg';
 import about3 from './about/about3.png';
 import about4 from './about/about4.jpg';
 import verfied from './verfied.gif'
 import armd from './about/armd.jpeg'
+import isimbi from './about/isimbi.jpeg';
 
 export {
     logo,
@@ -57,5 +58,6 @@ export {
     about3,
     about4,
     verfied,
-    armd
+    armd,
+    isimbi
 }

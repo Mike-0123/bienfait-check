@@ -95,9 +95,36 @@ const Contact = () => {
           <h1 className={subTitleStyles}>{constants.webInfo.name}</h1>
           <h1 className={titleStyles}>CONTACT DETAILS</h1>
           <div className="grid grid-cols-1 lg:grid-cols-3">
-            <ContactCard icon={<FaPhone />} title="TELEPHONE" data={`+250${constants.webInfo.phone}`} />
+            <ContactCard 
+  icon={<FaPhone />} 
+  title="TELEPHONE" 
+  data={<a href={`tel:+250${constants.webInfo.phone}`} className="hover:text-blue-500">+250{constants.webInfo.phone}</a>} 
+/>
+
+<ContactCard 
+  icon={<FaLocationDot />} 
+  title="ADDRESS" 
+  data={
+    <a 
+      href="https://www.google.com/maps/search/?api=1&query=33P7%2B2MG+Kigali" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="hover:text-blue-500"
+    >
+      {constants.webInfo.location}
+    </a>
+  } 
+/>
+
+<ContactCard 
+  icon={<FaEnvelope />} 
+  title="EMAIL" 
+  data={<a href={`mailto:${constants.webInfo.email}`} className="hover:text-blue-500">{constants.webInfo.email}</a>} 
+/>
+
+            {/* <ContactCard icon={<FaPhone />} title="TELEPHONE" data={`+250${constants.webInfo.phone}`} />
             <ContactCard icon={<FaLocationDot />} title="ADDRESS" data={constants.webInfo.location} />
-            <ContactCard icon={<FaEnvelope />} title="EMAIL" data={constants.webInfo.email} />
+            <ContactCard icon={<FaEnvelope />} title="EMAIL" data={constants.webInfo.email} /> */}
           </div>
         </AnimatedDiv>
       </ContentsDiv>

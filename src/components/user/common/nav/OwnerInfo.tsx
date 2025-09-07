@@ -8,7 +8,8 @@ const OwnerInfo = () => {
     return (
         <div className="bg-gradient-to-b from-textUserColor via-textUserColor to-textColorTransparent text-bgUserColor w-full flex justify-center gap-4 md:gap-6 lg:gap-10 pt-1 text-xs lg:text-sm">
                 <Link className="flex gap-2 items-center" target='_blank' to={`tel:+250${constants.webInfo.phone}`} ><FaPhoneAlt /> <span>+(250){constants.webInfo.phone}</span></Link>
-                <div className="flex gap-2 items-center"><FaLocationPin /> <span>{constants.webInfo.location}</span></div>
+                <div className="flex gap-2 items-center"><a href="https://www.google.com/maps/search/?api=1&query=33P7%2B2MG+Kigali" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center no-underline hover:no-underline hover:text-blue-500"><FaLocationPin /><span>{constants.webInfo.location}</span></a>
+</div>
                 <Link className="hidden md:flex gap-2 items-center" target='_blank' to={`mailto:${constants.webInfo.email}`}><FaEnvelope /> <span>{constants.webInfo.email}</span></Link>
                 
                 {/* Verified badge */}

@@ -19,7 +19,7 @@ const abouts: IAboutCard[] = [
     subTitle: 'Founder & Managing Director',
     img: about1,
     btnText: `CONNECT WITH ${constants.webInfo.ownerNames.toUpperCase()}`,
-    btnLnk: socialMediaLinks.linkedIn,
+    btnLnk:'https://www.instagram.com/bienfaitdesign/' ,
     description:'With 15 years of experience in engineering, S. Bienfait provides strategic direction to SPARTIAL ENGINEERING GROUP LTD, driving innovation, efficiency, and excellence. His expertise ensures high-quality solutions, sustainable growth, and industry-leading standards in every project.'
   },
   {

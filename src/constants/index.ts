@@ -3,7 +3,7 @@ const webInfo = {
     phone: "788208488",
     whatsappText: "Hello Spartial Engineering Group, I am from your website, can we talk?",
     slogan: "We bring your vision to life, Good design last forever",
-    location: "KG 774 St, Kigali-Rwanda",
+    location: "KG 14 Ave, Kigali-Gisozi-Rwanda",
     email: "spartialengineeringltd@gmail.com",
     ownerNames: "S. Bienfait",
 }

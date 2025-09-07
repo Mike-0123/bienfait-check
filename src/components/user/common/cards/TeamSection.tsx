@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { FaLinkedin } from "react-icons/fa";
-import { armd} from "../../assets";
+import { armd, isimbi} from "../../assets";
 
 interface ITeamMember {
   name: string;
@@ -14,19 +14,19 @@ const teamMembers: ITeamMember[] = [
     name: "SHEMA Chriss Armand",
     role: "Interior Designer",
     img:armd, // AI-themed
-    linkedin: "https://www.linkedin.com/in/bob-smith",
+    linkedin: "https://www.linkedin.com/in/shemachrisarmand/",
   },
   {
-    name: "ISIMBI Jean Claude",
-    role: "Project Manager",
-    img: "https://cdn3.iconfinder.com/data/icons/users-6/100/654854-user-women-4096.png", // AI-themed
-    linkedin: "https://www.linkedin.com/in/carol-williams",
+    name: "UWERA SIMBI Aline",
+    role: "Draft Women",
+    img:isimbi , 
+    linkedin: "https://www.linkedin.com/in/aline-uwera-simbi-022286301/",
   },
   {
     name: "KAZASOMAHO J.Claude",
     role: "Structual Engineer",
     img: "https://tse2.mm.bing.net/th/id/OIP.31F7heyNrbiTmHBz1Jc1LQHaH3?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3", // AI-themed
-    linkedin: "https://www.linkedin.com/in/david-johnson",
+    linkedin: "https://www.linkedin.com/in/kazasomaho-jean-claude/",
   },
 ];
 

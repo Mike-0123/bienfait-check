@@ -1,7 +1,7 @@
 import { FormProvider, useForm } from "react-hook-form"
 import constants from "../../../constants"
 import { h1Styles, pSmallStyles, subTitleStyles, titleStyles } from "../../styles"
-import { join_bg } from "../assets"
+import { about3, join_bg } from "../assets"
 import RoleCard, { IRoleCard, RoleTypeEnum } from "../common/cards/RoleCard"
 import ContentsDiv from "../common/shared/ContentsDiv"
 import PageHeader from "../common/shared/PageHeader"
@@ -70,7 +70,7 @@ const Join = () => {
     <div className="mb-5">
       <PageHeader
         title="JOIN US"
-        backgroundImage={join_bg}
+        backgroundImage={about3}
         description={`Interested in joining the ${constants.webInfo.name} team as a local or remote collaborator?`}
       />
       <ContentsDiv>
